@@ -12,9 +12,6 @@ for key in images:
     print(key)
 print(images['id'])
 annotations = data['annotations'][0]
-for key in annotations:
-    print('---------')
-    print(key)
+
 print(annotations['image_id'])
-print(annotations['id'])
 print(annotations['caption'])
