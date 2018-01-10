@@ -7,9 +7,10 @@ image_dim=224
 
 python dcc.py --image_model $model \
               --model_weights $model_weights \
-              --batch_size 16 \
+              --batch_size 14 \
               --image_dim $image_dim \
-              --extract_features
+              --extract_features \
+              --device 1
 
 #coco (out of domain)
 model='prototxts/train_classifiers_deploy.prototxt'
@@ -18,7 +19,7 @@ image_dim=224
 
 python dcc.py --image_model $model \
               --model_weights $model_weights \
-              --batch_size 16 \
+              --batch_size 14 \
               --image_dim $image_dim \
-              --extract_features
-
+              --extract_features \
+              --device 1

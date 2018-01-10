@@ -103,7 +103,7 @@ cd $annotation_folder
 for i in "${dcc_data[@]}"
 do 
   echo "Downloading: " $i
-  wget https://people.eecs.berkeley.edu/~lisa_anne/release_DCC/annotations_DCC/$i
+  #wget https://people.eecs.berkeley.edu/~lisa_anne/release_DCC/annotations_DCC/$i
 done
 cd $home_dir 
 
@@ -113,7 +113,7 @@ cd $models_folder
 for i in "${dcc_models[@]}"
 do 
   echo "Downloading: " $i
-  wget https://people.eecs.berkeley.edu/~lisa_anne/release_DCC/trained_models/$i
+  #wget https://people.eecs.berkeley.edu/~lisa_anne/release_DCC/trained_models/$i
 done
 cd $home_dir 
 
@@ -121,7 +121,7 @@ cd $home_dir
 echo "Downloading dcc word2vec..."
 cd dcc_transfer 
 echo "Downloading: " $i
-wget https://people.eecs.berkeley.edu/~lisa_anne/release_DCC/utils/vectors-cbow-bnc+ukwac+wikipedia.bin
+#wget https://people.eecs.berkeley.edu/~lisa_anne/release_DCC/utils/vectors-cbow-bnc+ukwac+wikipedia.bin
 cd $home_dir 
 
 mkdir -p results/generated_sentences 
@@ -133,7 +133,7 @@ cd $models_folder
 for i in "${dcc_sentences[@]}"
 do 
   echo "Downloading: " $i
-  wget https://people.eecs.berkeley.edu/~lisa_anne/release_DCC/generated_sentences/$i
+  #wget https://people.eecs.berkeley.edu/~lisa_anne/release_DCC/generated_sentences/$i
 done
 cd $home_dir 
 
@@ -141,8 +141,8 @@ mkdir -p outfiles
 mkdir -p outfiles/transfer
 
 #clone utilities from other folders
-git clone git@github.com:LisaAnne/sentence_gen_tools.git eval
-git clone https://github.com/LisaAnne/python_tools utils/tools
+#git clone git@github.com:LisaAnne/sentence_gen_tools.git eval
+#git clone https://github.com/LisaAnne/python_tools utils/tools
 
 cd eval
 ln -s ../utils/tools .
